@@ -4,7 +4,7 @@ This repository contains a pytorch implementation of a residual net reinforcemen
 
 ## Structure
 
-* `environment.py`: Contains the `RealGoGame` class. Manages the board state, legal moves, Ko rule checks, and territory scoring (Area Scoring).
+* `environment.py`: Manages the board state, legal moves, Ko rule checks, and territory scoring (Area Scoring).
 * `model.py`: Contains the Pytorch AlphaZeroNet model and state-to-tensor encoding
 * `mcts.py`: Monte-Carlo Tree Search. How the engine tests various moves from a given board state.
 * `trainer.py`: Has the main loop, complete_training_loop(). Orchestrates self-play and learning.
