@@ -8,7 +8,7 @@ This repository contains a pytorch implementation of a residual net reinforcemen
 * `model.py`: Contains the Pytorch AlphaZeroNet model and state-to-tensor encoding
 * `mcts.py`: Monte-Carlo Tree Search. How the engine tests various moves from a given board state.
 * `trainer.py`: Has the main loop, complete_training_loop(). Orchestrates self-play and learning.
-* 'GoNotebook.ipynb': Jupyter notebook that calls the training and confirms the results.
+* `GoNotebook.ipynb`: Jupyter notebook that calls the training and confirms the results.
 
 ## Results & Convergence
 
@@ -31,6 +31,7 @@ Replicate by building the docker image corresponding to the dockerfile in the re
 The docker build takes a while due to pytorch (up to 20 min depending on network speed).
 
 Once the docker image is built, run the jupyter notebook using your docker image.This can be a little tricky, but on linux my bash command looked something like:
+```text
 docker run -it \
   -p 8888:8888 \
   -v "/home/.../code_location:/app" \
@@ -40,5 +41,6 @@ docker run -it \
   --user $(id -u):$(id -g) \
   --env-file "/home/.../environment_file.location/.env" \
   your-built-docker-image-name
+```
 
 Something similar should work on windows using the terminal or powershell.
